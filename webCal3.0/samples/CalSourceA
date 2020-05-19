@@ -1,0 +1,99 @@
+################################
+## SI413, Summer AY2021
+################################
+
+Options:
+# right now, these are set to their default values
+stylesheet calstyle.css
+outfile calendarA.html
+# uncomment line below if you prefer d/m/y format
+# day-first-dates
+:endOptions:
+
+Head:
+  <title>SI413: Fall 2019 - Calendar</title>
+  <link rel="SHORTCUT ICON" HREF="http://www.usna.edu/Users/cs/wcbrown/ex1-1.png">
+  <script type="text/javascript">var noCSDepartmentBadge = null;</script>
+:endHead:
+
+BodyBefore:
+  <div id="NavBar"><script type="text/javascript" src="navbar.js"></script></div>
+:endBodyBefore:
+
+BodyAfter:
+  <hr>
+:endBodyAfter:
+
+DateRange:
+  5/26/2020
+  7/18/2020
+:endDateRange:
+
+Holidays(blocking):
+  Memorial Day 5/25
+  Independence Day (observed) 7/3
+:endHolidays(blocking):
+
+Holidays(non-blocking):
+  I-Day 6/25
+:endHolidays(non-blocking):
+
+Virtual_Days:
+#  Monday 3 9 2019
+:endVirtual_Days:
+
+Modifications:
+  5/26/2020 lec lec
+:endModifications:
+
+Topics: lec Numbered_Topics "<a href=\"lec/l$$/lec.html\">Class $</a>: " MMRR
+ Introduction to Programming Languages
+ Intro to Scheme &amp; Functional Programming
+ Scheme Lists I
+ The Structure of Scheme and intro first-class functions
+ Scheme: list internals, tail-recursion, letrec
+ Scheme: breaking the functional paradigm - closures!
+ Specifying syntax
+ Scanning
+ Parsing: top-down, bottom-up
+ Parsiing: Making the right choice in top-down parsing - FIRST, etc
+ Parsing - Shift-Reduce and SLR Parsing
+ Parsing - First and Follow and more SLR
+* Review / Project Intro
+* 6 Week Exam
+* Exam Debrief (6 Weeks in 1 day!)
+ Semantic Analysis I
+ Names, scopes, lifetimes I
+ Names, scopes, lifetimes II
+ Closures and lexical scope with Frames
+ Closure/Frame Review + AST optimization
+ Static vs. Dynamic Typing: Implementation
+* TBD
+* 12 Week Exam
+ IR and LLVM Intro
+ Expressions and assignments
+ More on l-values vs. r-values
+* Work on Lab & Projects
+* Work on Lab & Projects
+* Work on Lab & Projects
+* Work on Lab & Projects
+:endTopics:
+
+Topics: lab Numbered_Topics "<a href=\"lab/l$$/lab.html\">Lab $</a>:<br>" TF
+ Scheme: intro, symbols and lists
+ Scheme: first-class functions, map, apply, eval
+ Scheme: the final lab!
+ Tokenization and Parsing
+ Parse Lab I
+ Parse Lab II
+ LR Parsing &amp; Assoc/Prec
+ Abstract Syntax Trees
+ Interpreting an Abstract Syntax Tree
+ Implementing lexical scoping with frames
+[dyna] Dynamic Type Checking
+[gc] Garbage Collection
+ Compiling to LLVM
+* Finishing Compiling to LLVM
+*[pres] Presentations
+:endTopics:
+

@@ -1,0 +1,53 @@
+webCal version 3.0
+
+Install
+-------------------------------------------------------------
+To install, give the command 'make' in this directory.
+To test, cd to 'samples' and give the command
+
+  ../webCal CalSourceA
+
+This will create the file calendar.html.  Open it in your
+browser.  Note that it depends on calstyle.css, and note that
+this .css file is different than previous versions.
+
+
+Changes
+-------------------------------------------------------------
+There are a number of improvements / changes to previous webCal
+versions.  Here are a few:
+
+1. Dates are /-formatted and, by default, are month-first.  So,
+   for example, 5/25/2020.
+
+2. As long as at least one date has already appeared in full in
+   your input file, you can leave the year off and it will be
+   deduced.
+
+3. There is an "Options:" block that's used for setting some
+   things, like the stylefile, and outputfile.
+
+4. To a large extent, the order of the tagged blocks is irrelevant.
+   As an exception, I would make sure the DateRange: tag appears
+   before other blocks that include dates.  The only real reason
+   for this is so that other dates can be truncated by leaving the
+   year off.
+
+5. IMPORTANT! Patterns for Topics: can have repeated occurrences
+   of days. So, for example, I might use MMRR for my summer school
+   lectures.
+
+7. IMPORTANT! You may now add a "Modifications:" block, which
+   allows you to change Topics patterns for a day.  For example,
+   if 5/26/2020 would normally be a lab day, and I wanted to use
+   two lectures instead, I would do:
+
+
+   Modifications:
+     5/26/2020 lec lec
+   :endModifications:
+
+   NOTE: this requires another new feature, which is that "Topics:"
+         blocks can be given an id --- in this case I am assuming
+	 that my lecture topics block has the id "lec", which is
+	 what you'll see in the sample calendar CalSourceA 
