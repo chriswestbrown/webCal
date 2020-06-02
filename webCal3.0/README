@@ -1,0 +1,54 @@
+webCal - A system for creating course calendars in HTML
+
+INSTALL
+-------
+1. give the command 'make' in this directory
+2. the executable webCal will then be in this directory,
+   run as './webCal <inputfile>'.
+
+DOCUMENTATION
+-------------
+A. General Principles
+   1. usage: webcal <inputfile>
+      The input file is a plain text file with calendar
+      information as described below.  The resulting output
+      will be an html file containing the calendar.  This
+      file's name is determined by the "Options:" block
+      (see below).
+   2. The input file sytax follows typical unix conventions.
+      Comments begin with # and run up to the next newline.
+      The # can be escaped as \#.  Lines that end with \ are
+      treated as continuing onto the next line.
+   3. Input file processing is line-at-a-time.  The file
+      consists of blocks that being with the line "Name:"
+      and end with the line ":endName:", where "Name" is,
+      of course, different for different kinds of blocks.
+      The syntax and semantics of lines within a block are
+      dependent on the kind of block.
+   4. Dates are generally in MM/DD/YYYY format (though this
+      can be changed with the "day-first-dates" option).
+      However, after the first full date, dates may be given
+      in month/day format, and the year will be deduced.
+
+B. Blocks
+   1.  Options:
+       The Options: block allows you to specify certain prop-
+       erties of the parsing and processing of webCal.
+       a. stylesheet <css-file-name>
+          With this option the output html file will link to
+          the specified css file.
+       b. outfile <html-file-name>
+          This option specifies the name of the html file webCal
+	  generates.
+       c. day-first-dates
+          If this option appears, dates will be in DD/MM/YYYY.
+   2.  Head:
+       Any content here will appear in the head of the html file.
+   3.  BodyBefore:
+   4.  BodyAfter:
+   5.  DateRange:
+   6.  Holidays(blocking):
+   7.  Holidays(non-blocking):
+   8.  Virtual_Days:
+   9.  Modifications:
+   10. Topics:
