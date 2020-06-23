@@ -24,7 +24,8 @@ A. General Principles
       and end with the line ":endName:", where "Name" is,
       of course, different for different kinds of blocks.
       The syntax and semantics of lines within a block are
-      dependent on the kind of block.
+      dependent on the kind of block.  Most blocks allow
+      multiple copies to appear.
    4. Dates are generally in MM/DD/YYYY format (though this
       can be changed with the "day-first-dates" option).
       However, after the first full date, dates may be given
@@ -45,10 +46,35 @@ B. Blocks
    2.  Head:
        Any content here will appear in the head of the html file.
    3.  BodyBefore:
+       Any content here will appear in the body of the html file
+       before the calendar.
    4.  BodyAfter:
+       Any content here will appear in the body of the html file
+       after the calendar.
    5.  DateRange:
+       First line should be start date of "the range", and second
+       line should be end date. "The range" defines the dates over
+       which content in Topics: blocks will be distributed.
    6.  Holidays(blocking):
+       Each line ends in a date.  The line will be displayed in
+       the calendar on that date, and the date will not be used
+       for distributing topics.
    7.  Holidays(non-blocking):
+       Each line ends in a date.  The line will be displayed in
+       the calendar on that date.  The date will still be 
+       available for distributing topics.
    8.  Virtual_Days:
+       Day-of-week name followed by a date.  WebCal treats that
+       date as being the given day-of-the-week as far as
+       distributing topics.  So the line " Monday 6/23/20 "
+       would treat Tuesday, June 6th 2020 as a Monday for
+       scheduling purposes.
    9.  Modifications:
+       Each line is a date followed by one or more Topics: id's.
+       For example, if the Topics: block you were using was for
+       lectures, you might give it the id "lec".  Then
+       " 5/26/2020 lec lec " would tell webCal to distribute
+       two elements from the "lec" Topics: block to 26 May, 2020.
    10. Topics:
+       This is where the magic is ...
+       
