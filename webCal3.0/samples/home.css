@@ -1,0 +1,119 @@
+@import url(https://fonts.googleapis.com/css?family=Average);
+
+:root{
+    --accent-color:#669999;
+    --base-color: #1f2e2e;
+}
+
+
+body { 
+  font-family: Helvetica, sans-serif;
+  font-size: 10pt;
+  margin-left: 5em; margin-right: 5em; 
+  margin-top: 2em; margin-bottom: 2em; 
+  color: var(--base-color); background: #FFFFFF; 
+}
+
+A:link { color:  var(--base-color); }
+A:visited { color:  var(--base-color); }
+A:active { color:  var(--base-color); }
+A:hover { color: #AAAAAA; }
+
+A.bare { text-decoration: none; border-style: none; }
+
+h1 {
+  font-size: 1.2em;
+  font-weight: bold;
+  border-bottom-style: solid;
+  border-bottom-color: var(--accent-color);
+  margin-left: -3em;
+}
+
+.navpath {
+    display: inline-block;   
+    width: 7in;
+    margin-right: 0pt;
+    padding-right: 0pt;
+}
+
+.pathBase {
+    color: var(--accent-color);
+}
+
+/* arrows */
+.prev:before {
+content: "&larr;prev";
+}
+.prev { float: right; }
+
+.next:before {
+content: "next&rarr;";
+}
+.next { float: right; }
+
+.lmbutton  {
+/*    float: right;  */
+    height: 1.25em; 
+    vertical-align: text-bottom; 
+    cursor: pointer;
+}
+
+.lmbuttonDeactivated  {
+/*    float: right; */
+    height: 1.25em; 
+    vertical-align: text-bottom; 
+    opacity: 0.4;
+    /*filter: alpha(opacity=40);*/
+}
+
+.lmbuttonInvisible  {
+    height: 1.25em; 
+    vertical-align: text-bottom; 
+    visibility: hidden;
+}
+
+.regicon  {
+    height: 1.25em; 
+    vertical-align: text-bottom; 
+    cursor: pointer;
+}
+
+.cap {
+/* captions for */
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold
+}
+
+.newButton      {
+    border-radius: 6pt; height: 36pt; width: 36pt; 
+    text-align: center; vertical-align: middle;
+    color: white; 
+    background-color: var(--accent-color); 
+    font-size: 3em;
+}
+
+.newButtonSmall      {
+    display: inline-block;
+    border-radius:2pt; height: 12pt; width: 12pt; 
+    text-align: center; vertical-align: middle;
+    color: white; 
+    background-color: var(--accent-color); 
+    font-size: 10pt;
+    vertical-align: top;
+    margin-top: 2pt;
+}
+
+
+@media print { 
+body { 
+  margin-left: 0em; margin-right: 0em;
+  margin-top: 0em; margin-bottom: 0em; 
+}
+h1 {
+ margin-left: 0em;
+}
+.regicon, .prev, .next, .lmbutton, .lmbuttonDeactivated,
+.lmbuttonDeactivated, .lmbuttonInvisible, .newButtonSmall
+{ display: none; }
+}
