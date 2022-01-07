@@ -15,7 +15,7 @@ A. General Principles
       will be an html file containing the calendar.  This
       file's name is determined by the "Options:" block
       (see below).
-   2. The input file sytax follows typical unix conventions.
+   2. The input file syntax follows typical unix conventions.
       Comments begin with # and run up to the next newline.
       The # can be escaped as \#.  Lines that end with \ are
       treated as continuing onto the next line.
