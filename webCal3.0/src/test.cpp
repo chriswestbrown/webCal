@@ -10,7 +10,7 @@
 using namespace std;
 using namespace webcal;
 
-const char* version = "webCal version 3.0";
+const char* version = "webCal version 3.1";
 string processArguments(int argc, char** argv, WebCalContext& dc);
 
 int main(int argc, char** argv)
