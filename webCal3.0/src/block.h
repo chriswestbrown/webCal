@@ -334,6 +334,7 @@ namespace webcal
       int i = 0, nextCount = 1;
       for(auto itr = cbptr->begin(); itr != cbptr->end() && i < topicList.size(); ++itr)
       {
+	if (itr->getDate() < dcptr->firstDate()) continue; // don't fill if before firstDate
 	bool added = false;
 	do {
 	  int newCount = nextCount;
