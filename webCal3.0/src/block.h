@@ -402,7 +402,7 @@ namespace webcal
     virtual bool parseLine(const std::string& line)
     {
       mods.push_back(Mod());
-      mods.back().parseLine(line,dcptr);
+      return mods.back().parseLine(line,dcptr);
     }
     virtual Block* clone() { return new Modifications(*this); }
     int getPriorityLevel() { return 2; }
