@@ -18,6 +18,7 @@ namespace webcal
     WebCalContext* dcptr;
   public:
     Block(const std::string& tn, WebCalContext* dc) : tagname(tn), dcptr(dc) { }
+    virtual ~Block() { }
     virtual const std::string& getTag() const { return tagname; }
     virtual const std::string getEndTag() const { return ":end" + tagname; }
     // return true if parse succssful, false otherwise
